@@ -9,8 +9,10 @@ navbar:
   right:
     - text: "Home"
       href: index.html
-    - text: "About"
+    - text: "Research"
       href: about.html
-    - text: "Blog"
-      href: blog.html
+    - text: "Outreach"
+      href: Outreach.html
+    #- text: "Blog"
+    #  href: blog.html
 output: distill::distill_article
