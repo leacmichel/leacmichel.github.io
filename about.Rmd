@@ -1,0 +1,80 @@
+---
+title: "About me"
+
+  
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# My research  
+ 
+I am exploring how grey and white matter structure interact during development and how these interations support cognitive development in children and adolescents.
+
+During my PhD, I'm planning on working on four projects around this theme:  
+  
+**1. How grey and white matter structure bring partially overlapping information to the prediction of cognitive performance in children.**  
+
+To compare the role of grey and white matter in supporting cognitive performance, we used regularized structural equation models to predict cognitive performance with grey and white matter measures. We found that a model including grey and white matter metrics explains better the variance in individual differences in cognitive performance compared to a model with only grey or white matter metrics and that it is not an addition of the variances explained by the two models individually. Thus, grey and white matter structure bring both unique as well as shared information in predicting individual differences in cognitive abilities in children. 
+
+```{r, layout = "l-body-ouset", fig.width=3, echo=FALSE}
+
+knitr::include_graphics("C:/Users/leamic/Documents/Website2.0/Website_Lea/rsquare_project1.jpg")
+
+```
+
+Preprint: [Grey and white matter metrics demonstrate distinct and complementary prediction of differences in cognitive performance in children: Findings from ABCD (N= 11 876)](https://osf.io/ryskf/)  
+
+**2. The longitudinal development of grey and white matter metrics in typical development: the influence of cognitive performance**  
+
+**3. Bridging the gap between structural MRI and biology using in vivo histology**  
+The underlying physiology of common structural MRI metrics like cortical thickness is still debated. Using a unique dataset combining in vivo resection, MRI scans and behavioral measurements in 150 subjects, we will integrate measures of histology (thickness of the different layers, total dendritic length, cell body diameter…), structural neuroimaging (including cortical thickness and surface area) and IQ scores in a structural equation model to estimate how differences in low level biological features manifest as differences in MRI derived brain structure metrics. Crucially, we will also demonstrate how these histological metrics help explain individual differences in global cognitive performance metrics above and beyond the MRI measures. The aim of this project will be to highlight the possibilities and limitations of MRI metrics as a proxy of brain structure.  
+
+**4. The overlapping genetic influences on grey and white matter metrics**  
+The aim of this project is to look at the overlapping and distinct genetic influences on grey and white development in childhood and adolescence. From past studies, we have reasons to think that grey and white matter share a large number of genes, however these studies had several issues: small sample, crude measures of brain structure and cross-sectional. We will use a longitudinal approach to detect the shared genetic effects of grey and white matter using different brain structure metrics in a large sample across childhood and adolescence.  
+
+**5. Differentiating the impact of deprivation in grey and white matter metrics**  
+
+
+
+# My Outreach
+
+### Pint of Science 
+The [Pint of Science Festival](https://pintofscience.com/) is an international yearly event aimed at bridging the gap between the scientists and the public. Researchers come talk about their research in lay-man terms in a bar/cafe/public area to meet a larger audience. 
+I have been part for two years of the [Nijmegen committee](https://www.pintofscience.nl/nijmegen). Last year, we organised two events around "Interpreting brightness and space" and "Stimulating the technological revolution". 
+
+### Brain Olympiad
+The [International Brain Bee](https://www.thebrainbee.org/) promotes student engagement with neuroscience through the organization of the Brain Olympiad. This is a competition aims at highschool students to learn more about neuroscience. 
+The qualification for the Netherlands representant takes place in Nijmegen and Amsterdam.
+
+### Communication committee Flux Society
+Since 2022, I am part of the [Flux]() communication committee in the social media team. 
+
+### Fresco/Cognivence
+During my master and my first year of PhD, I was heavily invested as a treasurer and then vice president in the two French associations [Cognivence]() and [Fresco](). A few highlights among all the projects we organized:
+* Cognitive Science Forum project: I was in charge of creating and organizing 6 forums in cognitive science in 6 different cities in collaboration with local associations. These events allowed researchers, students, companies and the public to meet and learn more about specific topics in cognitive science. Every events were different to highlight the specific ecosystem of each city but all events were punctuated by talks, stands of labs, associations and companies, and alumni roundtable.  
+* Creating an alumni directory in cognitive science and a job ad page on the website
+* Promoting and organizing interaction and collaborative projects between the different associations in the federation. My favourite being this [collaborative escape game]() that we created for the Brain Awareness Week.
+
+
+### Others
+* Donders Open Day
+
+* Lifespan Cognitive Dynamics Lab [blog]()
+
+```{r, layout = "l-body-ouset", fig.width=3, echo=FALSE}
+
+knitr::include_graphics("C:/Users/leamic/Documents/Website2.0/Website_Lea/openday.jpg")
+
+```
+
+# My project on collaboration: PhD et al.
+
+From my struggle understanding how to create collaboration as an early career researcher, I created [PhD et al.](https://phd-et-al.org/)  
+The aim of PhD et al. is to create a space to facilitate collaboration between PhD students around the world. The output would be a website that would have three main features:
+
+* an online form to upload your project on the website and find collaborators  
+* a repository of all the projects uploaded and the possibility to apply for collaboration to any project  
+* a PhD directory with the profiles of every PhDs that upload a project or that apply to collaborate  
+

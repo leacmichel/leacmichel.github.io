@@ -1,0 +1,113 @@
+library(corrplot)
+library(Matrix)
+library(psych)
+library(lavaan)
+
+intercept<-data.frame(number=c(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21),
+                  i_frontal=c(3.4,1.3,2.4,3.3,1.3,0.8,1.4,6.8,2.4,2.4,3.4,4.1,3.2,4.3,7.1,3.0,8.1,4.6,8.9,3.2,4.0),
+                  i_temporal=c(1.8,1.4,6.7,2.3,2.4,3.4,4.1,3.2,4.3,3.1,3.0,5.7,4.6,8.2,3.2,4.0,3.4,8.3,2.4,3.3,1.3),
+                  i_parietal=c(2.4,3.4,4.1,2.2,4.3,3.1,3.0,8.1,4.6,8.2,3.2,4.6,3.4,1.3,2.4,3.7,1.3,0.8,1.4,0.8,2.3),
+                  i_occipital=c(8.1,4.6,8.2,3.2,4.0,3.4,1.3,2.4,7.3,1.3,0.8,1.4,6.8,2.3,2.7,3.4,4.1,3.2,4.3,3.1,3.0))
+
+slope<-data.frame(number=c(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21),
+                      s_frontal=c(1.4,7.3,2.5,1.1,7.3,9.8,7.5,6.8,2.3,2.4,1.5,4.7,3.2,5.1,1.7,3.9,8.7,5.6,8.2,3.2,4.0),
+                      s_temporal=c(9.8,7.5,6.8,2.3,2.4,1.5,4.7,3.2,5.1,1.7,3.9,8.7,5.6,8.2,3.2,4.0,1.4,7.3,2.5,1.1,7.3),
+                      s_parietal=c(2.4,1.5,4.7,3.2,5.1,1.7,3.9,8.7,5.6,8.2,3.2,4.0,1.4,7.3,2.5,1.1,7.3,9.8,7.5,6.8,2.3),
+                      s_occipital=c(8.7,5.6,8.2,3.2,4.0,1.4,7.3,2.5,1.1,7.3,9.8,7.5,6.8,2.3,2.4,1.5,4.7,3.2,5.1,1.7,3.9))
+
+cognition<-data.frame(number=c(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21),
+                  i_memory=c(9,6,7,9,5,7,4,9,3,7,5,5,9,3,8,4,7,6,7,8,9),
+                  i_reading=c(5,6,8,6,7,4,6,7,5,8,6,7,8,0,4,7,5,9,6,9,8),
+                  s_memory=c(7,3,9,8,6,4,8,9,7,6,9,5,7,9,3,5,6,8,6,8,7),
+                  s_reading=c(3,4,2,3,5,4,4,2,3,1,3,4,2,3,5,4,5,3,5,4,5))
+
+int_slope <- merge(intercept,slope,by=c("number"))
+data <- merge(int_slope,cognition,by=c("number"))
+#Show the intercepts and slopes per region in ggseg
+
+#Correlation matrix
+#intercept
+res_int <- cor(intercept[,c(2:5)])
+corrplot(res_int)
+#compare the two hemispheres
+
+#slope
+res_slope <- cor(slope[,c(2:5)])
+corrplot(res_slope)
+#compare the two hemispheres
+
+#intercept - slope
+res_int_slope <- cor(int_slope[,c(2:9)])
+corrplot(res_int_slope)
+#compare the two hemispheres
+
+
+#nearPD            -------- I don't understand
+nearPD(res_int)
+nearPD(res_slope)
+
+#Schmid-Leiman transformation -  intercept
+schmid(res_int,nfactors=2,fm="minres",rotate="oblimin")
+#selection of the optimal solution was based on eigenvalue magnitudes and distribution across factors, loading pattern (i.e., presence of factors with strong loadings were preferred), and the root mean square of residuals (RMSR)
+#Test again with the right hemisphere - used Pearson’s r and the coefficient of factor congruence to formally quantify whether the resultant factor loading pattern replicated across hemispheres
+
+#Schmid-Leiman transformation -  intercept
+schmid(res_slope,nfactors=2,fm="minres",rotate="oblimin")
+#selection of the optimal solution was based on eigenvalue magnitudes and distribution across factors, loading pattern (i.e., presence of factors with strong loadings were preferred), and the root mean square of residuals (RMSR)
+#Test again with the right hemisphere- used Pearson’s r and the coefficient of factor congruence to formally quantify whether the resultant factor loading pattern replicated across hemispheres
+
+#Test correlation between intercepts and slope factor structures - used Pearson’s r and the coefficient of factor congruence to formally quantify whether the resultant factor loading pattern replicated across hemispheres
+
+
+#I don't understand why they don't do a normal EFA?
+fa.parallel(res_int,fm="minres")
+
+
+
+#CFA imposing the factor structure from before
+#no clue how to extract the factor from the schmid function
+#not sure what to do with the intercepts
+CFA_slope <- 'Cortex_gSlope =~ s_frontal + s_temporal + s_parietal + s_occipital
+              Cortex_Slope_F1 =~ s_temporal + s_occipital
+              Cortex_Slope_F2 =~ s_parietal
+              Cortex_gSlope ~~ 0*Cortex_Slope_F1
+              Cortex_gSlope ~~ 0*Cortex_Slope_F2
+              Cortex_Slope_F1 ~~ Cortex_Slope_F2'
+
+fit_CFA_slope <- cfa(CFA_slope, data=slope,estimator="mlr",missing="fiml")
+summary(fit_CFA_slope, fit.measures=TRUE,rsquare=T,standardized=T)
+
+#CFA cognition
+CFA_cog <- 'Cognition_level =~ i_memory + i_reading
+            Cognition_slope =~ s_memory + s_reading
+            Cognition_level ~~ Cognition_slope
+'
+fit_CFA_cog <- cfa(CFA_cog, data=data,estimator="mlr",missing="fiml")
+summary(fit_CFA_cog, fit.measures=TRUE,rsquare=T,standardized=T)
+
+
+
+#CFA slope and cognition
+CFA_slope_cog <- 'Cortex_gSlope =~ s_frontal + s_temporal + s_parietal + s_occipital
+                  Cortex_Slope_F1 =~ s_temporal + s_occipital
+                  Cortex_Slope_F2 =~ s_parietal
+                  Cortex_gSlope ~~ 0*Cortex_Slope_F1
+                  Cortex_gSlope ~~ 0*Cortex_Slope_F2
+                  Cortex_Slope_F1 ~~ Cortex_Slope_F2
+       
+                  Cognition_level =~ i_memory + i_reading
+                  Cognition_slope =~ s_memory + s_reading
+                  Cognition_level ~~ Cognition_slope
+                  
+                  Cortex_gSlope ~ Cognition_level
+                  Cortex_gSlope ~ Cognition_slope
+                  Cortex_Slope_F1 ~ Cognition_level
+                  Cortex_Slope_F1 ~ Cognition_slope
+                  Cortex_Slope_F2 ~ Cognition_level
+                  Cortex_Slope_F2 ~ Cognition_slope
+
+'
+
+fit_CFA_slope_cog <- cfa(CFA_slope_cog, data=data,estimator="mlr",missing="fiml")
+summary(fit_CFA_slope_cog, fit.measures=TRUE,rsquare=T,standardized=T)
+

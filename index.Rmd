@@ -1,0 +1,33 @@
+---
+title: "Lea Michel"
+site: distill::distill_website
+
+output: 
+   postcards::jolla
+
+image: "profilepicture.jpg"
+
+twitter:
+  site: "@LeaCMichel"
+links:
+  - label: '<i class="fab fa-twitter"></i> Twitter'
+    url: "https://twitter.com/LeaCMichel"
+  - label: '<i class="fab fa-linkedin"></i> Linkedin'
+    url: "https://www.linkedin.com/in/l%C3%A9a-camille-michel/"
+  - label: '<i class="fab fa-github"></i> GitHub'
+    url: "https://github.com/lea-michel"
+  - label: '<i class="fas fa-envelope"></i> Email'
+    url: "mailto:lea.michel@radboudumc.nl"
+  - label: '<i class="ai ai-orcid"></i> ORCID'
+    url: "https://orcid.org/0000-0003-1529-573X"
+  - label: '<i class="ai ai-osf"></i> OSF'
+    url: "https://osf.io/czkxg/"
+  - label: '<i class="ai ai-cv"></i> CV'
+    url: "Lea_Michel_CV.pdf"
+
+---
+
+**About me** I'm a second-year PhD student at the Donders Institute in Rogier Kievit group [Lifespan Cognitive Dynamics Lab](https://www.rogierkievit.com/). 
+I work on how brain maturation in grey and white matter (using brain structural metrics) supports cognitive development. 
+
+I am also interested in how genetics and epigenetics affect the brain, the effect of the environment and particularly abuse on the brain, intergenerational transmission of abuse and mental health.

@@ -1,0 +1,16 @@
+name: "leacmichel"
+title: "Lea Michel"
+description: |
+  My Blog
+output_dir: "docs"
+base_url : https://leacmichel.github.io/
+navbar:
+  search: false
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html
+    - text: "Blog"
+      href: blog.html
+output: distill::distill_article
