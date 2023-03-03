@@ -28,8 +28,9 @@ During my master and my first year of PhD, I was heavily invested as a treasurer
 
 ```{r, layout = "l-body-ouset", fig.width=3, echo=FALSE}
 
-knitr::include_graphics("C:/Users/leamic/Documents/Website2.0/Website_Lea/FSC1.jpg")
-knitr::include_graphics("C:/Users/leamic/Documents/Website2.0/Website_Lea/FSC_Fresco2.jpg")
+knitr::include_graphics("C:/Users/leamic/Documents/Website2.0/leacmichel.github.io/FSC1.jpg")
+
+knitr::include_graphics("C:/Users/leamic/Documents/Website2.0/leacmichel.github.io/FSC_Fresco2.jpg")
 
 ```
 
@@ -39,7 +40,7 @@ knitr::include_graphics("C:/Users/leamic/Documents/Website2.0/Website_Lea/FSC_Fr
 
 ```{r, layout = "l-body-ouset", fig.width=2, echo=FALSE}
 
-knitr::include_graphics("C:/Users/leamic/Documents/Website2.0/Website_Lea/braingame.jpg")
+knitr::include_graphics("C:/Users/leamic/Documents/Website2.0/leacmichel.github.io/braingame.jpg")
 
 ```
 

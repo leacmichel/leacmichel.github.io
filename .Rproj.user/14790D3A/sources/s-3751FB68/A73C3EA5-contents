@@ -1,9 +1,0 @@
----
-title: "Blog Posts"
-site: distill::distill_article
-listing: posts
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```

@@ -23,7 +23,7 @@ To compare the role of grey and white matter in supporting cognitive performance
 
 ```{r, layout = "l-body-ouset", fig.width=3, echo=FALSE}
 
-knitr::include_graphics("C:/Users/leamic/Documents/Website2.0/Website_Lea/rsquare_project1.jpg")
+knitr::include_graphics("C:/Users/leamic/Documents/Website2.0/leacmichel.github.io/rsquare_project1.jpg")
 
 ```
 
@@ -47,7 +47,7 @@ We want to explore which brain modalities (grey or white matter) is more sensiti
 
 ```{r, layout = "l-body-ouset", fig.width=3, echo=FALSE}
 
-knitr::include_graphics("C:/Users/leamic/Documents/Website2.0/Website_Lea/talkposter.jpg")
+knitr::include_graphics("C:/Users/leamic/Documents/Website2.0/leacmichel.github.io/talkposter.jpg")
 
 ```
 
