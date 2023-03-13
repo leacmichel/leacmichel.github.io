@@ -27,22 +27,25 @@ knitr::include_graphics("C:/Users/leamic/Documents/Website2.0/leacmichel.github.
 
 ```
 
-Preprint: [Grey and white matter metrics demonstrate distinct and complementary prediction of differences in cognitive performance in children: Findings from ABCD (N= 11 876)](https://www.biorxiv.org/content/10.1101/2023.03.06.529634v1)  
+Preprint: [Grey and white matter metrics demonstrate distinct and complementary prediction of differences in cognitive performance in children: Findings from ABCD (N= 11 876)](https://www.biorxiv.org/content/10.1101/2023.03.06.529634v1) 
+
 
 ### 2. The longitudinal development of grey and white matter metrics in typical development: the influence of cognitive performance
 We want to assess how longitudinal development of grey and white matter unfolds in typical development. Specifically, we want to understand whether recent changes in one measure/property (e.g. grey matter volume) predicts the rate of change in the other (e.g. fractional anisotropy), and how this informs our grasp of the dynamics of brain development. Moreover, we hypothesize that this process may manifest differently in people who differ in cognitive performance.  
 To address these questions, we will use a bivariate dual change score model to model changes and differences in brain structure.  
 You can see the preliminary results on the [slides](https://osf.io/b5ht7) from my ICPS symposium.
 
+
 ### 3. Bridging the gap between structural MRI and biology using in vivo histology
 The underlying physiology of common structural MRI metrics like cortical thickness is still debated. Using a unique dataset combining in vivo resection, MRI scans and behavioral measurements in 150 subjects, we will integrate measures of histology (thickness of the different layers, total dendritic length, cell body diameter…), structural neuroimaging (including cortical thickness and surface area) and IQ scores in a structural equation model to estimate how differences in low level biological features manifest as differences in MRI derived brain structure metrics. Crucially, we will also demonstrate how these histological metrics help explain individual differences in global cognitive performance metrics above and beyond the MRI measures. The aim of this project will be to highlight the possibilities and limitations of MRI metrics as a proxy of brain structure.  
+
 
 ### 4. The overlapping genetic influences on grey and white matter metrics
 The aim of this project is to look at the overlapping and distinct genetic influences on grey and white development in childhood and adolescence. From past studies, we have reasons to think that grey and white matter share a large number of genes, however these studies had several issues: small sample, crude measures of brain structure and cross-sectional. We will use a longitudinal approach to detect the shared genetic effects of grey and white matter using different brain structure metrics in a large sample across childhood and adolescence.  
 
+
 ### 5. Differentiating the impact of maltreatment in grey and white matter metrics  
 We want to explore which brain modalities (grey or white matter) is more sensitive to early adversity (maltreatment). We will focus on deprivation related adversity which is thought to have an impact on neural development and more precisely synaptic pruning. 
-
 
 
 ```{r, layout = "l-body-ouset", fig.width=3, echo=FALSE}
