@@ -53,3 +53,5 @@ The aim of PhD et al. is to create a space to facilitate collaboration between P
 * a repository of all the projects uploaded and the possibility to apply for collaboration to any project  
 * a PhD directory with the profiles of every PhDs that upload a project or that apply to collaborate  
 
+The project received a grant from [The Society for the Improvement of Psychological Science](https://improvingpsych.org/) and will be presented as a hackathon at the SIPS conference 2023 in Italy. 
+
