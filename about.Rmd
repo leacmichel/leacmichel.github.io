@@ -33,7 +33,7 @@ Preprint: [Grey and white matter metrics demonstrate distinct and complementary 
 ### 2. The longitudinal development of grey and white matter metrics in typical development: the influence of cognitive performance  
 We want to assess how longitudinal development of grey and white matter unfolds in typical development. Specifically, we want to understand whether recent changes in one measure/property (e.g. grey matter volume) predicts the rate of change in the other (e.g. fractional anisotropy), and how this informs our grasp of the dynamics of brain development. Moreover, we hypothesize that this process may manifest differently in people who differ in cognitive performance.  
 To address these questions, we will use a bivariate dual change score model to model changes and differences in brain structure.  
-You can see the preliminary results on the [slides](https://osf.io/b5ht7) from my ICPS symposium.
+You can see the preliminary results on the [slides](https://osf.io/b5ht7) from my ICPS 2023 symposium.
 
 
 ### 3. Bridging the gap between structural MRI and biology using in vivo histology  
