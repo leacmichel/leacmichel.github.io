@@ -26,3 +26,22 @@ jobs:
         run: python scripts/fetch_gh_issues.py
         env:
           GH_AUTH: ${{ secrets.GH_AUTH }}
+          
+      - name: Install dependencies
+        run: |
+          install.packages("rmarkdown")
+          install.packages("distill")
+          install.packages("postcards")
+          install.packages("devtools")
+          install.packages("fs")
+          devtools::install_github("leacmichel/leacmichel.github.io")
+        shell: Rscript {0}
+        
+      - name: Render Site
+        run: Rscript -e 'rmarkdown::render_site(encoding = "UTF-8")'
+        
+      - name: Commit results
+        run: |
+          git add -A
+          git commit -m 'Rebuild site' || echo "No changes to commit"
+          git push origin || echo "No changes to commit"
