@@ -8,7 +8,7 @@ import json
 def fetch_gh_issues():
 
     GH_AUTH = os.environ['GH_AUTH']
-    REPO = 'ohbm/hackathon2023'
+    REPO = 'leacmichel/leacmichel.github.io'
     ISSUE_LABEL = 'Project'
     ISSUE_READY_LABEL = 'Good to go'
     ISSUE_FILTER = f'labels={ISSUE_LABEL}&per_page=100'
@@ -98,12 +98,9 @@ def fetch_gh_issues():
         except:
             pass
 
-    with open('./public/projects.json', 'w') as f:
+    with open('./projects.json', 'w') as f:
         json.dump(issues_list, f, indent=2)
 
 
 if __name__ == '__main__':
-    from dotenv import load_dotenv
-    load_dotenv()
-
     fetch_gh_issues()

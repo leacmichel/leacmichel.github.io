@@ -1,0 +1,28 @@
+name: Deploy Pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+  issues:
+    types:
+      - edited
+      - labeled
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+  issues: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Fetching projects from GitHub
+        run: python scripts/fetch_gh_issues.py
+        env:
+          GH_AUTH: ${{ secrets.GH_AUTH }}
