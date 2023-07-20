@@ -1,0 +1,27 @@
+---
+title: "Form"
+
+---
+
+## Form
+
+<button>
+    <a href="https://github.com/"> Submit a project </a>
+</button>
+
+```{r setup, echo=FALSE,message=FALSE,result="asis"}
+knitr::opts_chunk$set(echo = TRUE)
+
+library("rjson")
+myData <- fromJSON(file="projects.json")
+
+
+for (project in myData) {
+  cat("\n###",project$title,"\n")
+  
+}
+
+```
+
+
+

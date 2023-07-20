@@ -13,6 +13,8 @@ navbar:
       href: about.html
     - text: "Outreach"
       href: Outreach.html
+    - text: "Form"
+      href: Form.html
     #- text: "Blog"
     #  href: blog.html
 output: distill::distill_article
