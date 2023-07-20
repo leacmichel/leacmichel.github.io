@@ -6,7 +6,7 @@ title: "Form"
 ## Form
 
 <button>
-    <a href="https://github.com/"> Submit a project </a>
+    <a href="https://github.com/leacmichel/leacmichel.github.io/issues/new?assignees=octocat&labels=Project&projects=&template=project-form.yml&title=%3CMy+Project+Name%3E"> Submit a project </a>
 </button>
 
 ```{r setup, echo=FALSE,message=FALSE,result="asis"}
