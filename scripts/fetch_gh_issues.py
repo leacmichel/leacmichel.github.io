@@ -8,7 +8,7 @@ import json
 def fetch_gh_issues():
 
     GH_AUTH = os.environ['GH_AUTH']
-    REPO = 'ohbm/hackathon2023'
+    REPO = 'leacmichel/leacmichel.github.io'
     ISSUE_LABEL = 'Project'
     ISSUE_READY_LABEL = 'Good to go'
     ISSUE_FILTER = f'labels={ISSUE_LABEL}&per_page=100'
