@@ -103,7 +103,4 @@ def fetch_gh_issues():
 
 
 if __name__ == '__main__':
-    from dotenv import load_dotenv
-    load_dotenv()
-
     fetch_gh_issues()
