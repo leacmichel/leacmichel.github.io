@@ -1,17 +1,17 @@
-name: Brainhack Project Form
+name: Project Form
 description: This provides the backbone structure for your project description. Please follow along to submit your project!
 title: "<My Project Name>"
-labels: ["Hackathon Project"]
+labels: ["Project"]
 assignees:
   - octocat
 body:
   - type: markdown
     attributes:
       value: |
-        *We are very excited to meet you at the 2023 OHBM Brainhack 🎉* *To submit a project, you need to register to 2023 OHBM Brainhack first, please follow [the link](https://www.humanbrainmapping.org/i4a/ams/meetings/index.cfm?controller=meetings&action=startRegistration&conferenceID=146&reginit=1&pageID=4217). Thank you!*
+        *To submit a project, you need to have a profile on the website first, please follow [the link](https://phd-et-al.org/members/). Thank you!*
 
-        *We have prepared this template to help with your project submission. Please fill the template (at least all 'required' items must be provided) and we will assign a 'project monitor' to follow your submission.
-        If at any time you need help or anything is unclear, please add a comment and ping your project monitor.*
+        * Please fill this template with the details of your project and what you need for this collaboration.
+        If at any time you need help or anything is unclear, please add a comment and ping any of us.*
 
         Thank you!
 
@@ -19,15 +19,15 @@ body:
     id: title
     attributes:
       label: Title
-      description: Name of your awesome project. Please also update the title of the issue to be the title of your project
+      description: Name of your project. Please also update the title of the issue to be the title of your project
     validations:
       required: true
 
   - type: textarea
-    id: goals
+    id: description
     attributes:
-      label: Short description and the goals for the OHBM BrainHack
-      description: Please provide a short description and goals for the hackathon, check [the guide](https://github.com/ohbm/hackathon2023/blob/main/.github/ISSUE_TEMPLATE/handbooks/projects.md#goals) for suggestions
+      label: Short summary of the project
+      description: Please provide a short description and goals for this collaboration, check [the guide](https://phd-et-al.org/blog/) for suggestions
     validations:
       required: true
 
@@ -42,43 +42,32 @@ body:
   - type: input
     id: website-image
     attributes:
-      label: Image for the OHBM brainhack website
-      description: Please provide a link only (not required, but highly recommended). Please provide the RAW content of the file if you use an image from a GitHub repo.
+      label: Image for the project page on the website
+      description: Please provide a link only (not required, but highly recommended).
     validations:
       required: false
 
   - type: textarea
     id: project-leads
     attributes:
-      label: Project lead
-      description: Your name and GitHub login AND Discord login (we will be using Discord during the hackathon, please be sure to register [here](https://discord.com/invite/qUzW56dZT2)). Add multiple leaders if you can, if leaders cover different Hubs, please add this next to the name.
+      label: Project lead(s)
+      description: Name and email of the project lead(s). 
       placeholder: One per line
-    validations:
-      required: true
-
-  - type: dropdown
-    id: hub
-    attributes:
-      label: Main Hub
-      description: The main Hackathon Hub of your project (the project pitch will be given during in this hub), see more [here](https://github.com/ohbm/hackathon2023/blob/main/.github/ISSUE_TEMPLATE/handbooks/projects.md#hubs)
-      options:
-        - Montreal
-        - Asia / Pacific
-        - Europe / Middle East / Africa
-        - Americas
     validations:
       required: true
 
   - type: checkboxes
     id: otherhub
     attributes:
-      label: Other Hub covered by the leaders
-      description: Please choose other hubs that are covered by your leaders (be sure to have at least one leader in the specific timezones, and make a note next to their names)
+      label: Output of the project
+      description: Please choose the expected output(s) for this collaboration
       options:
-        - label: Montreal
-        - label: Asia / Pacific
-        - label: Europe / Middle East / Africa
-        - label: Americas
+        - label: Acedemic paper
+        - label: Article in a media
+        - label: Code (R Package, Shiny App,...)
+        - label: Consortium
+    validations:
+      required: true
 
   - type: textarea
     id: skills
@@ -89,53 +78,10 @@ body:
       required: true
 
   - type: checkboxes
-    id: tutorials
-    attributes:
-      label: Recommended tutorials for new contributors
-      description: We provided [a list of tutorials](https://ohbm.github.io/hackathon2023/traintrack/) that might be helpful for new contributors. Please check all the tutorials that will be useful to work on your project.
-      options:
-        - label: "[Set up a brainhack friendly computing environment](https://school-brainhack.github.io/modules/installation/)"
-        - label: "[A introduction to Bash](https://school-brainhack.github.io/modules/introduction_to_terminal/)"
-        - label: "[Python: Writing a script](https://school-brainhack.github.io/modules/python_scripts/)"
-        - label: "[Python: Data analysis with Python](https://school-brainhack.github.io/modules/python_data_analysis/)"
-        - label: "[Python: Visualisation](https://school-brainhack.github.io/modules/python_visualization/)"
-        - label: "[Machine learning basics](https://school-brainhack.github.io/modules/machine_learning_basics/)"
-        - label: "[BIDS](https://school-brainhack.github.io/modules/bids/)"
-        - label: "[Machine learning for neuroimaging](https://school-brainhack.github.io/modules/machine_learning_neuroimaging/)"
-        - label: "[VCS: Using Git and Github](https://school-brainhack.github.io/modules/git_github/)"
-        - label: "[VCS: Data management with Datalad](https://school-brainhack.github.io/modules/datalad/)"
-        - label: "[Virtualization](https://school-brainhack.github.io/modules/containers/)"
-        - label: "High Performance Computing: [Oracle cloud resource](https://brainhack.org/brainhack_cloud/)"
-
-  - type: textarea
-    id: issues
-    attributes:
-      label: Good first issues
-      description: If you welcome new contributors, please provide a list of good-first-issues (not required, but highly recommended), check [the guide](https://github.com/ohbm/hackathon2023/blob/main/.github/ISSUE_TEMPLATE/handbooks/projects.md#good-first-issues) for suggestions
-    validations:
-      required: false
-
-  - type: textarea
-    id: twiter
-    attributes:
-      label: Twitter summary
-      description: Twitter-size summary of your project pitch, please check [the guide](https://github.com/ohbm/hackathon2023/blob/master/.github/ISSUE_TEMPLATE/handbooks/projects.md#twitter-size-summary-of-your-project-pitch)
-    validations:
-      required: false
-
-  - type: input
-    id: chatchannel
-    attributes:
-      label: Short name for the Discord chat channel (~15 chars)
-      description: Please give a short name for the Discord chat channel, e.g. "my-brain-project"
-    validations:
-      required: true
-
-  - type: checkboxes
     id: coc
     attributes:
-      label: "Please read and follow the OHBM Code of Conduct"
-      description: Read here [the OHBM Code of Conduct](https://ohbm.github.io/hackathon2023/code-of-conduct/)
+      label: "Please read and follow the Code of Conduct"
+      description: Read here [the Code of Conduct]https://phd-et-al.org/blog/)
       options:
-        - label: I agree to follow the OHBM Code of Conduct during the hackathon
+        - label: I agree to follow the Code of Conduct during the collaboration
           required: true
