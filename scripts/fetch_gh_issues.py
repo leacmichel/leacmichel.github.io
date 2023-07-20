@@ -98,7 +98,7 @@ def fetch_gh_issues():
         except:
             pass
 
-    with open('./public/projects.json', 'w') as f:
+    with open('./projects.json', 'w') as f:
         json.dump(issues_list, f, indent=2)
 
 
