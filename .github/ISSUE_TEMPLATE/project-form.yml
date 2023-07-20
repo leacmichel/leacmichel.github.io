@@ -1,0 +1,87 @@
+name: Project Form
+description: This provides the backbone structure for your project description. Please follow along to submit your project!
+title: "<My Project Name>"
+labels: ["Project"]
+assignees:
+  - octocat
+body:
+  - type: markdown
+    attributes:
+      value: |
+        *To submit a project, you need to have a profile on the website first, please follow [the link](https://phd-et-al.org/members/). Thank you!*
+
+        * Please fill this template with the details of your project and what you need for this collaboration.
+        If at any time you need help or anything is unclear, please add a comment and ping any of us.*
+
+        Thank you!
+
+  - type: input
+    id: title
+    attributes:
+      label: Title
+      description: Name of your project. Please also update the title of the issue to be the title of your project
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Short summary of the project
+      description: Please provide a short description and goals for this collaboration, check [the guide](https://phd-et-al.org/blog/) for suggestions
+    validations:
+      required: true
+
+  - type: input
+    id: link
+    attributes:
+      label: Link to the Project
+      description: Please provide **one URL** for the project, e.g. GitHub repository. See [the guide](https://github.com/ohbm/hackathon2023/blob/main/.github/ISSUE_TEMPLATE/handbooks/projects.md#link-to-project) for other suggestions.
+    validations:
+      required: true
+
+  - type: input
+    id: website-image
+    attributes:
+      label: Image for the project page on the website
+      description: Please provide a link only (not required, but highly recommended).
+    validations:
+      required: false
+
+  - type: textarea
+    id: project-leads
+    attributes:
+      label: Project lead(s)
+      description: Name and email of the project lead(s). 
+      placeholder: One per line
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: otherhub
+    attributes:
+      label: Output of the project
+      description: Please choose the expected output(s) for this collaboration
+      options:
+        - label: Acedemic paper
+        - label: Article in a media
+        - label: Code (R Package, Shiny App,...)
+        - label: Consortium
+    validations:
+      required: true
+
+  - type: textarea
+    id: skills
+    attributes:
+      label: Skills
+      description: Please provide skills you expect contributors to have, so others can have better ideas if they can join. You can include non-technical skills, or simply write None, check [the guide](https://github.com/ohbm/hackathon2023/blob/main/.github/ISSUE_TEMPLATE/handbooks/projects.md#onboarding-skills) for more suggestions.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: coc
+    attributes:
+      label: "Please read and follow the Code of Conduct"
+      description: Read here [the Code of Conduct]https://phd-et-al.org/blog/)
+      options:
+        - label: I agree to follow the Code of Conduct during the collaboration
+          required: true
