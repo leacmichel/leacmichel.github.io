@@ -7,14 +7,33 @@ title: "Outreach"
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
+### The platform PhD et al.
+
+From my struggle understanding how to create collaboration as an early career researcher, I created [PhD et al.](https://phd-et-al.org/)  
+The aim of PhD et al. is to create a space to foster collaboration between PhD students around the world. The output will be a website with two main features:
+
+* a repository of all the projects uploaded and the possibility to apply for collaboration to any project  
+* a PhD directory with the profiles of every PhDs that upload a project or that apply to collaborate  
+
+The project received a grant from [The Society for the Improvement of Psychological Science](https://improvingpsych.org/) and was presented as a hackathon at the SIPS conference 2023 in Italy. 
+
+```{r, layout = "l-body-ouset", fig.width=3, echo=FALSE}
+
+knitr::include_graphics("C:/Users/leamic/Documents/Website2.0/leacmichel.github.io/hackathon.jpg")
+
+```
+
+We now have a team of dedicated early career researchers working on the development of the project, an official version will be launched at the beginning of 2024. 
+If you're interested in joining the team of PhD et al. team, you can join the [Discord](https://discord.gg/fZ2GAJNGm).
+
+### Green Research
+I am part of the department Green Team within my institute since January 2023. Our main tasks are to create awareness about the environmental footprint of our research/academic life, with a particular focus on flight behaviour and suggest individual and collective actions to minimize it. We organize events, push for greener policies and raise awareness about relevant topics for academia. 
+
+Since October 2023, I have been elected Chair Elect of the [OHBM Sustainable and Environmental Action Specific Interest Group](https://ohbm-environment.org/), position that I will occupy for the next three years. The group works with the neuroimaging community to develop tools and educational materials that help researchers be aware of their environmental impact and make changes to minimise this. This includes working directly with OHBM to advise on how the annual conference can be made more sustainable.
 
 ### Pint of Science 
 The [Pint of Science Festival](https://pintofscience.com/) is an international yearly event aimed at bridging the gap between the scientists and the public. Researchers come talk about their research in lay-man terms in a bar/cafe/public area to meet a larger audience. 
 I have been part for two years of the [Nijmegen committee](https://www.pintofscience.nl/nijmegen). Last year, we organised two events around "Interpreting brightness and space" and "Stimulating the technological revolution". 
-
-### Brain Olympiad
-The [International Brain Bee](https://www.thebrainbee.org/) promotes student engagement with neuroscience through the organization of the Brain Olympiad. This is a competition aims at highschool students to learn more about neuroscience. 
-The qualification for the Netherlands representant takes place in Nijmegen and Amsterdam.
 
 ### Communication committee Flux Society
 Since 2022, I am part of the [Flux](https://fluxsociety.org/) communication committee in the social media team. 
@@ -36,6 +55,7 @@ knitr::include_graphics("C:/Users/leamic/Documents/Website2.0/leacmichel.github.
 
 ### Others
 * Donders Open Day
+* Brain exposition at the Brain Olympiad
 * Lifespan Cognitive Dynamics Lab [blog](https://www.rogierkievit.com/blog)
 
 ```{r, layout = "l-body-ouset", fig.width=2, echo=FALSE}
@@ -43,15 +63,3 @@ knitr::include_graphics("C:/Users/leamic/Documents/Website2.0/leacmichel.github.
 knitr::include_graphics("C:/Users/leamic/Documents/Website2.0/leacmichel.github.io/braingame.jpg")
 
 ```
-
-# My project on collaboration: PhD et al.
-
-From my struggle understanding how to create collaboration as an early career researcher, I created [PhD et al.](https://phd-et-al.org/)  
-The aim of PhD et al. is to create a space to facilitate collaboration between PhD students around the world. The output would be a website that would have three main features:
-
-* an online form to upload your project on the website and find collaborators  
-* a repository of all the projects uploaded and the possibility to apply for collaboration to any project  
-* a PhD directory with the profiles of every PhDs that upload a project or that apply to collaborate  
-
-The project received a grant from [The Society for the Improvement of Psychological Science](https://improvingpsych.org/) and will be presented as a hackathon at the SIPS conference 2023 in Italy. 
-

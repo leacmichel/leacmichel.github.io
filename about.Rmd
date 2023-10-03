@@ -8,7 +8,11 @@ title: "My research"
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
- 
+```{r, layout = "l-body-ouset", fig.width=3, echo=FALSE}
+
+knitr::include_graphics("C:/Users/leamic/Documents/Website2.0/leacmichel.github.io/talkposter.jpg")
+
+``` 
  
 **I am exploring how grey and white matter structure interact during development and how these interactions support cognitive development in children and adolescents.**
 
@@ -20,12 +24,6 @@ Throughout this PhD, I will focus on five core projects around this theme:
 ### 1. How grey and white matter structure bring partially overlapping information to the prediction of cognitive performance in children.   
 
 To compare the role of grey and white matter in supporting cognitive performance, we used regularized structural equation models to predict cognitive performance with grey and white matter measures. We found that a model including grey and white matter metrics explains better the variance in individual differences in cognitive performance compared to a model with only grey or white matter metrics and that it is not an addition of the variances explained by the two models individually. Thus, grey and white matter structure bring both unique as well as shared information in predicting individual differences in cognitive abilities in children. 
-
-```{r, layout = "l-body-ouset", fig.width=3, echo=FALSE}
-
-knitr::include_graphics("C:/Users/leamic/Documents/Website2.0/leacmichel.github.io/rsquare_project1.jpg")
-
-```
 
 Preprint: [Grey and white matter metrics demonstrate distinct and complementary prediction of differences in cognitive performance in children: Findings from ABCD (N= 11 876)](https://www.biorxiv.org/content/10.1101/2023.03.06.529634v1) 
 
@@ -48,10 +46,6 @@ The aim of this project is to look at the overlapping and distinct genetic influ
 We want to explore which brain modalities (grey or white matter) is more sensitive to early adversity (maltreatment). We will focus on deprivation related adversity which is thought to have an impact on neural development and more precisely synaptic pruning. 
 
 
-```{r, layout = "l-body-ouset", fig.width=3, echo=FALSE}
 
-knitr::include_graphics("C:/Users/leamic/Documents/Website2.0/leacmichel.github.io/talkposter.jpg")
-
-```
-
-
+**If you want to know more, here is the video of the presentation I did for my department at the end of my second-year presenting my first three projects**
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=loQhqkxR73o" frameborder="0" allowfullscreen></iframe>
