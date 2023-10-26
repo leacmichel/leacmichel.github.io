@@ -455,8 +455,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
 
   <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-  <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
-  <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
+  <link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet"/>
+  <link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet"/>
   <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
   <!--/radix_placeholder_navigation_in_header-->
   <!--radix_placeholder_distill-->
@@ -526,6 +526,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   d-article table.gt_table td,
   d-article table.gt_table th {
     border-bottom: none;
+    font-size: 100%;
   }
 
   .html-widget {
@@ -1598,15 +1599,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
-        if ($(this).children()[0].nodeName == "D-FOOTNOTE") {
-          var fn = $(this).children()[0]
+        const citeChild = $(this).children()[0]
+        // Do not process if @xyz has been used without escaping and without bibliography activated
+        // https://github.com/rstudio/distill/issues/466
+        if (citeChild === undefined) return true
+
+        if (citeChild.nodeName == "D-FOOTNOTE") {
+          var fn = citeChild
           $(this).html(fn.shadowRoot.querySelector("sup"))
           $(this).id = fn.id
           fn.remove()
         }
         var refs = $(this).attr('data-cites').split(" ");
         var refHtml = refs.map(function(ref) {
-          return "<p>" + $('#ref-' + ref).html() + "</p>";
+          // Could use CSS.escape too here, we insure backward compatibility in navigator
+          return "<p>" + $('div[id="ref-' + ref + '"]').html() + "</p>";
         }).join("\n");
         window.tippy(this, {
           allowHTML: true,
@@ -1805,7 +1812,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+  <script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -1868,12 +1875,14 @@ The aim of PhD et al. is to create a space to foster collaboration between PhD 
 <div class="layout-chunk" data-layout="l-body-ouset">
 <p><img src="hackathon.jpg" width="2016" /></p>
 </div>
-<p>We now have a team of dedicated early career researchers working on the development of the project, an official version will be launched at the beginning of 2024. If you’re interested in joining the team of PhD et al. team, you can join the <a href="https://discord.gg/fZ2GAJNGm">Discord</a>.</p>
+<p>We now have a team of dedicated early career researchers working on the development of the project, an official version will be launched at the beginning of 2024.
+If you’re interested in joining the team of PhD et al. team, you can join the <a href="https://discord.gg/fZ2GAJNGm">Discord</a>.</p>
 <h3 id="green-research">Green Research</h3>
 <p>I am part of the department Green Team within my institute since January 2023. Our main tasks are to create awareness about the environmental footprint of our research/academic life, with a particular focus on flight behaviour and suggest individual and collective actions to minimize it. We organize events, push for greener policies and raise awareness about relevant topics for academia.</p>
 <p>Since October 2023, I have been elected Chair Elect of the <a href="https://ohbm-environment.org/">OHBM Sustainable and Environmental Action Specific Interest Group</a>, position that I will occupy for the next three years. The group works with the neuroimaging community to develop tools and educational materials that help researchers be aware of their environmental impact and make changes to minimise this. This includes working directly with OHBM to advise on how the annual conference can be made more sustainable.</p>
 <h3 id="pint-of-science">Pint of Science</h3>
-<p>The <a href="https://pintofscience.com/">Pint of Science Festival</a> is an international yearly event aimed at bridging the gap between the scientists and the public. Researchers come talk about their research in lay-man terms in a bar/cafe/public area to meet a larger audience. I have been part for two years of the <a href="https://www.pintofscience.nl/nijmegen">Nijmegen committee</a>. Last year, we organised two events around “Interpreting brightness and space” and “Stimulating the technological revolution”.</p>
+<p>The <a href="https://pintofscience.com/">Pint of Science Festival</a> is an international yearly event aimed at bridging the gap between the scientists and the public. Researchers come talk about their research in lay-man terms in a bar/cafe/public area to meet a larger audience.
+I have been part for two years of the <a href="https://www.pintofscience.nl/nijmegen">Nijmegen committee</a>. Last year, we organised two events around “Interpreting brightness and space” and “Stimulating the technological revolution”.</p>
 <h3 id="communication-committee-flux-society">Communication committee Flux Society</h3>
 <p>Since 2022, I am part of the <a href="https://fluxsociety.org/">Flux</a> communication committee in the social media team.</p>
 <h3 id="frescocognivence">Fresco/Cognivence</h3>
@@ -1890,6 +1899,7 @@ The aim of PhD et al. is to create a space to foster collaboration between PhD 
 <h3 id="others">Others</h3>
 <ul>
 <li>Donders Open Day</li>
+<li>Brain exposition at the Brain Olympiad</li>
 <li>Lifespan Cognitive Dynamics Lab <a href="https://www.rogierkievit.com/blog">blog</a></li>
 </ul>
 <div class="layout-chunk" data-layout="l-body-ouset">

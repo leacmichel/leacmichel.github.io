@@ -455,8 +455,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
 
   <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-  <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet"/>
-  <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet"/>
+  <link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet"/>
+  <link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet"/>
   <script src="site_libs/headroom-0.9.4/headroom.min.js"></script>
   <!--/radix_placeholder_navigation_in_header-->
   <!--radix_placeholder_distill-->
@@ -526,6 +526,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   d-article table.gt_table td,
   d-article table.gt_table th {
     border-bottom: none;
+    font-size: 100%;
   }
 
   .html-widget {
@@ -1598,15 +1599,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
       // hoverable references
       $('span.citation[data-cites]').each(function() {
-        if ($(this).children()[0].nodeName == "D-FOOTNOTE") {
-          var fn = $(this).children()[0]
+        const citeChild = $(this).children()[0]
+        // Do not process if @xyz has been used without escaping and without bibliography activated
+        // https://github.com/rstudio/distill/issues/466
+        if (citeChild === undefined) return true
+
+        if (citeChild.nodeName == "D-FOOTNOTE") {
+          var fn = citeChild
           $(this).html(fn.shadowRoot.querySelector("sup"))
           $(this).id = fn.id
           fn.remove()
         }
         var refs = $(this).attr('data-cites').split(" ");
         var refHtml = refs.map(function(ref) {
-          return "<p>" + $('#ref-' + ref).html() + "</p>";
+          // Could use CSS.escape too here, we insure backward compatibility in navigator
+          return "<p>" + $('div[id="ref-' + ref + '"]').html() + "</p>";
         }).join("\n");
         window.tippy(this, {
           allowHTML: true,
@@ -1805,7 +1812,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+  <script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -1860,7 +1867,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <p><img src="talkposter.jpg" width="993" /></p>
 </div>
 <p><strong>I am exploring how grey and white matter structure interact during development and how these interactions support cognitive development in children and adolescents.</strong></p>
-<p>In the past decades, studies on the development of the brain and studies on the development of cognitive abilities have been increasing tremendously, however how these two modalities develop in interplay is still an area with little knowledge. The goal of this PhD is to understand the relation between changes in grey and white matter structures and cognitive development. During development, grey and white matter changes enable the children to adapt to its environment and to reach the maximum of their cognitive abilities, however it is still unclear how these processes interact with each other and what are the effects of genetics and environment. To move beyond the brain structure metrics, we will also examine what aspects of the underlying physiology (changes in neuropil or myelinization) is driving these processes.</p>
+<p>In the past decades, studies on the development of the brain and studies on the development of cognitive abilities have been increasing tremendously, however how these two modalities develop in interplay is still an area with little knowledge. The goal of this PhD is to understand the relation between changes in grey and white matter structures and cognitive development.
+During development, grey and white matter changes enable the children to adapt to its environment and to reach the maximum of their cognitive abilities, however it is still unclear how these processes interact with each other and what are the effects of genetics and environment. To move beyond the brain structure metrics, we will also examine what aspects of the underlying physiology (changes in neuropil or myelinization) is driving these processes.</p>
 <p>Throughout this PhD, I will focus on five core projects around this theme:</p>
 <h3 id="how-grey-and-white-matter-structure-bring-partially-overlapping-information-to-the-prediction-of-cognitive-performance-in-children.">1. How grey and white matter structure bring partially overlapping information to the prediction of cognitive performance in children.</h3>
 <p>To compare the role of grey and white matter in supporting cognitive performance, we used regularized structural equation models to predict cognitive performance with grey and white matter measures. We found that a model including grey and white matter metrics explains better the variance in individual differences in cognitive performance compared to a model with only grey or white matter metrics and that it is not an addition of the variances explained by the two models individually. Thus, grey and white matter structure bring both unique as well as shared information in predicting individual differences in cognitive abilities in children.</p>
@@ -1875,7 +1883,8 @@ You can see the preliminary results on the <a href="https://osf.io/b5ht7">slides
 <p>The aim of this project is to look at the overlapping and distinct genetic influences on grey and white development in childhood and adolescence. From past studies, we have reasons to think that grey and white matter share a large number of genes, however these studies had several issues: small sample, crude measures of brain structure and cross-sectional. We will use a longitudinal approach to detect the shared genetic effects of grey and white matter using different brain structure metrics in a large sample across childhood and adolescence.</p>
 <h3 id="differentiating-the-impact-of-maltreatment-in-grey-and-white-matter-metric">5. Differentiating the impact of maltreatment in grey and white matter metric</h3>
 <p>We want to explore which brain modalities (grey or white matter) is more sensitive to early adversity (maltreatment). We will focus on deprivation related adversity which is thought to have an impact on neural development and more precisely synaptic pruning.</p>
-<p><strong>If you want to know more, here is the video of the presentation I did for my department at the end of my second-year presenting my first three projects</strong> <iframe width="560" height="315" src="https://www.youtube.com/watch?v=loQhqkxR73o" frameborder="0" allowfullscreen></iframe></p>
+<p><strong>If you want to know more, here is the video of the presentation I did for my department at the end of my second-year presenting my first three projects</strong>
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=loQhqkxR73o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
