@@ -48,5 +48,5 @@ We want to explore which brain modalities (grey or white matter) is more sensiti
 
 
 **If you want to know more, here is the video of the presentation I did for my department at the end of my second-year presenting my first three projects**
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=loQhqkxR73o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/loQhqkxR73o?si=QRvQv7FDtwXMBQ6g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
