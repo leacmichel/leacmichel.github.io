@@ -567,9 +567,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     display: none !important;
   }
 
+  hr.section-separator {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 0px;
+  }
+
+
+  d-byline {
+    border-top: none;
+  }
+
   d-article {
     padding-top: 2.5rem;
     padding-bottom: 30px;
+    border-top: none;
   }
 
   d-appendix {
@@ -664,6 +676,11 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   d-article div.sourceCode pre {
     padding-left: 18px;
     font-size: 14px;
+  }
+
+  /* tweak for Pandoc numbered line within distill */
+  d-article pre.numberSource code > span {
+      left: -2em;
   }
 
   d-article pre {
@@ -1425,6 +1442,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     // create d-title
     $('.d-title').changeElementType('d-title');
 
+    // separator
+    var separator = '<hr class="section-separator" style="clear: both"/>';
+    // prepend separator above appendix
+    $('.d-byline').before(separator);
+    $('.d-article').before(separator);
+
     // create d-byline
     var byline = $('<d-byline></d-byline>');
     $('.d-byline').replaceWith(byline);
@@ -1502,8 +1525,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     $('.distill-force-highlighting-css').parent().remove();
 
     // remove empty line numbers inserted by pandoc when using a
-    // custom syntax highlighting theme
-    $('code.sourceCode a:empty').remove();
+    // custom syntax highlighting theme, except when numbering line
+    // in code chunk
+    $('pre:not(.numberLines) code.sourceCode a:empty').remove();
 
     // load distill framework
     load_distill_framework();
@@ -1529,12 +1553,13 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
       // add orcid ids
       $('.authors-affiliations').find('.author').each(function(i, el) {
         var orcid_id = front_matter.authors[i].orcidID;
+        var author_name = front_matter.authors[i].author
         if (orcid_id) {
           var a = $('<a></a>');
           a.attr('href', 'https://orcid.org/' + orcid_id);
           var img = $('<img></img>');
           img.addClass('orcid-id');
-          img.attr('alt', 'ORCID ID');
+          img.attr('alt', author_name ? 'ORCID ID for ' + author_name : 'ORCID ID');
           img.attr('src','data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg==');
           a.append(img);
           $(this).append(a);
@@ -1812,7 +1837,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </script>
 
   <!--/radix_placeholder_distill-->
-  <script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
+  <script src="site_libs/header-attrs-2.27/header-attrs.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -1845,7 +1870,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <div class="nav-right">
 <a href="index.html">Home</a>
 <a href="about.html">Research</a>
-<a href="Outreach.html">Outreach</a>
+<a href="Outreach.html">On the side</a>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
 </div>
 </nav>
@@ -1856,6 +1881,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 <div class="d-title">
 <h1>My research</h1>
+
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
 
@@ -1866,24 +1892,21 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <div class="layout-chunk" data-layout="l-body-ouset">
 <p><img src="talkposter.jpg" width="993" /></p>
 </div>
-<p><strong>I am exploring how grey and white matter structure interact during development and how these interactions support cognitive development in children and adolescents.</strong></p>
-<p>In the past decades, studies on the development of the brain and studies on the development of cognitive abilities have been increasing tremendously, however how these two modalities develop in interplay is still an area with little knowledge. The goal of this PhD is to understand the relation between changes in grey and white matter structures and cognitive development.
-During development, grey and white matter changes enable the children to adapt to its environment and to reach the maximum of their cognitive abilities, however it is still unclear how these processes interact with each other and what are the effects of genetics and environment. To move beyond the brain structure metrics, we will also examine what aspects of the underlying physiology (changes in neuropil or myelinization) is driving these processes.</p>
-<p>Throughout this PhD, I will focus on five core projects around this theme:</p>
+<p><strong>I am exploring how grey and white matter structure interact during development in adolescents.</strong></p>
+<p>In the past decades, studies on brain-behaviour associations have been increasing tremendously, however these studies often focus on either one metric in grey matter or in white matter. How these two modalities develop in interplay is still an area with little knowledge. The goal of this PhD is to understand the relation between changes in grey matter and changes in white matter structures during adolescence.
+During development, grey and white matter changes enable the children to adapt to its environment and to reach the maximum of their cognitive abilities, however it is still unclear how these processes interact with each other and what are the effects of genetics and environment. To move beyond the brain structure metrics, we will also examine what aspects of the underlying physiology (changes in neuropil ) is driving these processes.</p>
+<p>Throughout this PhD, I focused on four core projects around this theme:</p>
 <h3 id="how-grey-and-white-matter-structure-bring-partially-overlapping-information-to-the-prediction-of-cognitive-performance-in-children.">1. How grey and white matter structure bring partially overlapping information to the prediction of cognitive performance in children.</h3>
 <p>To compare the role of grey and white matter in supporting cognitive performance, we used regularized structural equation models to predict cognitive performance with grey and white matter measures. We found that a model including grey and white matter metrics explains better the variance in individual differences in cognitive performance compared to a model with only grey or white matter metrics and that it is not an addition of the variances explained by the two models individually. Thus, grey and white matter structure bring both unique as well as shared information in predicting individual differences in cognitive abilities in children.</p>
-<p>Preprint: <a href="https://www.biorxiv.org/content/10.1101/2023.03.06.529634v1">Grey and white matter metrics demonstrate distinct and complementary prediction of differences in cognitive performance in children: Findings from ABCD (N= 11 876)</a></p>
+<p>Published: <a href="https://www.jneurosci.org/content/jneuro/44/12/e0465232023.full.pdf">Grey and white matter metrics demonstrate distinct and complementary prediction of differences in cognitive performance in children: Findings from ABCD (N= 11 876)</a></p>
 <h3 id="the-longitudinal-development-of-grey-and-white-matter-metrics-in-typical-development-the-influence-of-cognitive-performance">2. The longitudinal development of grey and white matter metrics in typical development: the influence of cognitive performance</h3>
-<p>We want to assess how longitudinal development of grey and white matter unfolds in typical development. Specifically, we want to understand whether recent changes in one measure/property (e.g. grey matter volume) predicts the rate of change in the other (e.g. fractional anisotropy), and how this informs our grasp of the dynamics of brain development. Moreover, we hypothesize that this process may manifest differently in people who differ in cognitive performance.<br />
-To address these questions, we will use a bivariate dual change score model to model changes and differences in brain structure.<br />
-You can see the preliminary results on the <a href="https://osf.io/b5ht7">slides</a> from my ICPS 2023 symposium.</p>
-<h3 id="bridging-the-gap-between-structural-mri-and-biology-using-in-vivo-histology">3. Bridging the gap between structural MRI and biology using in vivo histology</h3>
-<p>The underlying physiology of common structural MRI metrics like cortical thickness is still debated. Using a unique dataset combining in vivo resection, MRI scans and behavioral measurements in 150 subjects, we will integrate measures of histology (thickness of the different layers, total dendritic length, cell body diameter…), structural neuroimaging (including cortical thickness and surface area) and IQ scores in a structural equation model to estimate how differences in low level biological features manifest as differences in MRI derived brain structure metrics. Crucially, we will also demonstrate how these histological metrics help explain individual differences in global cognitive performance metrics above and beyond the MRI measures. The aim of this project will be to highlight the possibilities and limitations of MRI metrics as a proxy of brain structure.</p>
-<h3 id="the-overlapping-genetic-influences-on-grey-and-white-matter-metrics">4. The overlapping genetic influences on grey and white matter metrics</h3>
-<p>The aim of this project is to look at the overlapping and distinct genetic influences on grey and white development in childhood and adolescence. From past studies, we have reasons to think that grey and white matter share a large number of genes, however these studies had several issues: small sample, crude measures of brain structure and cross-sectional. We will use a longitudinal approach to detect the shared genetic effects of grey and white matter using different brain structure metrics in a large sample across childhood and adolescence.</p>
-<h3 id="differentiating-the-impact-of-maltreatment-in-grey-and-white-matter-metric">5. Differentiating the impact of maltreatment in grey and white matter metric</h3>
-<p>We want to explore which brain modalities (grey or white matter) is more sensitive to early adversity (maltreatment). We will focus on deprivation related adversity which is thought to have an impact on neural development and more precisely synaptic pruning.</p>
-<p><strong>If you want to know more, here is the video of the presentation I did for my department at the end of my second-year presenting my first three projects</strong>
+<p>We assessed how longitudinal development of grey and white matter unfolds in typical development. In our study, we investigated the co-development of grey matter volume and white matter fractional anisotropy across the 12-wave HUBU cohort including 90 typically developing individuals. Using generalized additive mixed models to characterize changes in these metrics between the age of 7 and 22 years, we explored the associations between individual differences at baseline and subsequent rates of change to elucidate the co-development between grey and white matter.</p>
+<p>You can see the preliminary results on the <a href="https://osf.io/b5ht7">slides</a> from my ICPS 2023 symposium.</p>
+<h3 id="the-neural-scars-of-adversity-how-do-different-kinds-of-adversity-predict-the-development-of-grey-and-white-matter-structure-in-two-longitudinal-neuroimaging-cohorts">3. The neural scars of adversity: how do different kinds of adversity predict the development of grey and white matter structure in two longitudinal neuroimaging cohorts?</h3>
+<p>We explored which brain modalities (grey or white matter) is more sensitive to early adversity (maltreatment). This study investigates whether distinct patterns of grey and white matter development during adolescence can be explained by exposure to different types of adversity. We applied the adverse adolescent experiences framework categorizing adversity into four levels: intrapersonal (e.g. accidents), interpersonal with parents (e.g. emotional neglect), interpersonal with peers (e.g. bullying) and community (e.g. neighborhood safety). Exposure to each of the four factors was estimated through a confirmatory factor analysis with variables from self-report questionnaires. We analyzed two large longitudinal datasets: the Adolescent Brain Cognitive Development study (~12,000 adolescents measured at ages 10, 12, and 14) and the IMAGEN study (~1,400 adolescents measured at ages 14, 19, and 22). Using latent growth curve models, we captured individual differences in brain development by estimating baseline levels (intercepts) and rates of change (slopes) for grey matter volume and white matter fractional anisotropy. We examined how different measures of adversity predicted individual differences in level and changes in grey and white matter.</p>
+<h3 id="bridging-the-gap-between-structural-mri-and-cognition-using-in-vivo-histology">4. Bridging the gap between structural MRI and cognition using in vivo histology</h3>
+<p>The underlying physiology of common structural MRI metrics like cortical thickness is still debated. Using a unique dataset combining in vivo resection, MRI scans and behavioral measurements in 50 subjects, we integrated measures of histology (thickness of the different layers, total dendritic length, cell body diameter…), structural neuroimaging (cortical thickness) and IQ scores in a structural equation model to estimate how differences in low level biological features manifest as differences in MRI derived brain structure metrics. Crucially, we also demonstrate how these histological metrics help explain individual differences in global cognitive performance metrics above and beyond the MRI measures. The aim of this project is to highlight the possibilities and limitations of MRI metrics as a proxy of brain structure.</p>
+<p><strong>If you want to know more, here is the video of the presentation I did for my department at the end of my second-year presenting three projects</strong>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/loQhqkxR73o?si=QRvQv7FDtwXMBQ6g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->

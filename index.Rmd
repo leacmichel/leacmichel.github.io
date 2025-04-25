@@ -11,10 +11,14 @@ image: "profilepicture.jpg"
 twitter:
   site: "@LeaCMichel"
 links:
-  - label: '<i class="fab fa-twitter"></i> Twitter'
-    url: "https://twitter.com/LeaCMichel"
+  - label: '<i class="fab fa-googlescholar"></i> Google Scholar'
+    url: "https://scholar.google.com/citations?user=YazsGkMAAAAJ&hl=fr&oi=ao"  
   - label: '<i class="fab fa-linkedin"></i> Linkedin'
     url: "https://www.linkedin.com/in/l%C3%A9a-camille-michel/"
+  - label: '<i class="fab fa-bluesky"></i> Bluesky'
+    url: "https://bsky.app/profile/leacmichel.bsky.social"
+  - label: '<i class="fab fa-twitter"></i> Twitter'
+    url: "https://twitter.com/LeaCMichel"
   - label: '<i class="fab fa-github"></i> GitHub'
     url: "https://github.com/leacmichel"
   - label: '<i class="fas fa-envelope"></i> Email'
@@ -33,13 +37,14 @@ links:
 **PhD Student, Cognitive Neuroscience Department, Donders Institute, Radboud University Medical Center, Nijmegen**  
 
  
-I'm a third-year PhD student at the Donders Institute in Rogier Kievit group [Lifespan Cognitive Dynamics Lab](https://www.rogierkievit.com/). 
-I work on how brain maturation in grey and white matter (using brain structural metrics) supports cognitive development.   
+I'm a fourth-year PhD student at the Donders Institute in Rogier Kievit group [Lifespan Cognitive Dynamics Lab](https://www.rogierkievit.com/). 
+I study the co-development of grey and white matter structure in adolescence.    
 
 I am also interested in how genetics and epigenetic affect the brain, the effect of the environment and particularly abuse on the brain, intergenerational transmission of abuse and mental health.  
 
 My posters and talk slides will be uploaded on [OSF](https://osf.io/ep2dg/). Feel free to contact me for information on any of these projects or for a collaboration. 
 
 
-I'm also the founder of [PhD et al.](https://phd-et-al.org/), a platform to foster collaboration between PhD students all over the world. The website is in construction, an official version will be launched at the beginning of 2024. 
-Follow me on Twitter to be updated about the project. Interested in joining PhD et al team? Join the [Discord](https://discord.gg/fZ2GAJNGm).
+Alongside my PhD, I am also invested in reducing the carbon footprint of academia, working both within my department and the Organization for Human Brain Mapping, as the chair of the [SEA-SIG](https://ohbm-environment.org/). 
+
+

@@ -1,5 +1,5 @@
 ---
-title: "Outreach"
+title: "On the side"
 
   
 ---
@@ -7,7 +7,41 @@ title: "Outreach"
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
-### The platform PhD et al.
+
+## Green Research
+I am part of the department Green Team within my institute since January 2023. Our main tasks are to create awareness about the environmental footprint of our research/academic life, with a particular focus on flight behaviour and suggest individual and collective actions to minimize it. We organize events, push for greener policies and raise awareness about relevant topics for academia. 
+
+In October 2023, I have been elected Chair (Elect) of the [OHBM Sustainable and Environmental Action Specific Interest Group](https://ohbm-environment.org/), position that I will occupy for the next three years. The group works with the neuroimaging community to develop tools and educational materials that help researchers be aware of their environmental impact and make changes to minimise this. This includes working directly with OHBM to advise on how the annual conference can be made more sustainable.
+
+
+
+## Outreach
+
+During my PhD, I got invested in several outreach activities with the aim to bring science outside of the lab. I participated in Open Days, events organised for students, visits in classroom, Brain Awareness Weeks to talk about brain structure in human and non human. 
+
+
+### Pint of Science 
+The [Pint of Science Festival](https://pintofscience.com/) is an international yearly event aimed at bridging the gap between the scientists and the public. Researchers come talk about their research in lay-man terms in a bar/cafe/public area to meet a larger audience. 
+I have been part for four years of the [Nijmegen committee](https://www.pintofscience.nl/nijmegen). This year, I will present research on my PhD with a talk titled "Grey or white, does it matter?"
+
+
+### Fresco/Cognivence
+During my master and my first year of PhD, I was heavily invested as a treasurer and then vice president in the two French associations [Cognivence](https://cognivence.scicog.fr/) and [Fresco](https://federationfresco.fr/). A few highlights among all the projects we organized:  
+
+* Cognitive Science Forum project: I was in charge of creating and organizing 6 forums in cognitive science in 6 different cities in collaboration with local associations. These events allowed researchers, students, companies and the public to meet and learn more about specific topics in cognitive science. Every events were different to highlight the specific ecosystem of each city but all events were punctuated by talks, stands of labs, associations and companies, and alumni roundtable.  
+* Creating an [alumni directory](https://federationfresco.fr/cogalumni/registre-cogalumni/) in cognitive science and a job ad page on the website
+* Promoting and organizing interaction and collaborative projects between the different associations in the federation. My favourite being this [collaborative escape game](https://www.cjoint.com/doc/21_04/KDlrJpM7yBJ_Je-ne-suis-pas-un-robot---Instructions.pdf?fbclid=IwAR39Ym5BTLvoU2644u0cXZRQNDlBSxTdNOrgi73Jh7gMZRRLJRc6Xz97tP8) that we created for the Brain Awareness Week (only available in French).
+
+
+```{r, layout = "l-body-ouset", fig.width=2, echo=FALSE}
+
+knitr::include_graphics("C:/Users/leamic/Documents/Website2.0/leacmichel.github.io/braingame.jpg")
+
+```
+
+
+
+## The platform PhD et al.
 
 From my struggle understanding how to create collaboration as an early career researcher, I created [PhD et al.](https://phd-et-al.org/)  
 The aim of PhD et al. is to create a space to foster collaboration between PhD students around the world. The output will be a website with two main features:
@@ -17,49 +51,7 @@ The aim of PhD et al. is to create a space to foster collaboration between PhD s
 
 The project received a grant from [The Society for the Improvement of Psychological Science](https://improvingpsych.org/) and was presented as a hackathon at the SIPS conference 2023 in Italy. 
 
-```{r, layout = "l-body-ouset", fig.width=3, echo=FALSE}
 
-knitr::include_graphics("C:/Users/leamic/Documents/Website2.0/leacmichel.github.io/hackathon.jpg")
+Unfortunately the project got put on the side due to lack of time with my PhD. However, I still believe such a website would be beneficial to the broader PhD community and I'm searching organisms that can use this idea and develop it. 
 
-```
 
-We now have a team of dedicated early career researchers working on the development of the project, an official version will be launched at the beginning of 2024. 
-If you're interested in joining the team of PhD et al. team, you can join the [Discord](https://discord.gg/fZ2GAJNGm).
-
-### Green Research
-I am part of the department Green Team within my institute since January 2023. Our main tasks are to create awareness about the environmental footprint of our research/academic life, with a particular focus on flight behaviour and suggest individual and collective actions to minimize it. We organize events, push for greener policies and raise awareness about relevant topics for academia. 
-
-Since October 2023, I have been elected Chair Elect of the [OHBM Sustainable and Environmental Action Specific Interest Group](https://ohbm-environment.org/), position that I will occupy for the next three years. The group works with the neuroimaging community to develop tools and educational materials that help researchers be aware of their environmental impact and make changes to minimise this. This includes working directly with OHBM to advise on how the annual conference can be made more sustainable.
-
-### Pint of Science 
-The [Pint of Science Festival](https://pintofscience.com/) is an international yearly event aimed at bridging the gap between the scientists and the public. Researchers come talk about their research in lay-man terms in a bar/cafe/public area to meet a larger audience. 
-I have been part for two years of the [Nijmegen committee](https://www.pintofscience.nl/nijmegen). Last year, we organised two events around "Interpreting brightness and space" and "Stimulating the technological revolution". 
-
-### Communication committee Flux Society
-Since 2022, I am part of the [Flux](https://fluxsociety.org/) communication committee in the social media team. 
-
-### Fresco/Cognivence
-During my master and my first year of PhD, I was heavily invested as a treasurer and then vice president in the two French associations [Cognivence](https://cognivence.scicog.fr/) and [Fresco](https://federationfresco.fr/). A few highlights among all the projects we organized:  
-
-* Cognitive Science Forum project: I was in charge of creating and organizing 6 forums in cognitive science in 6 different cities in collaboration with local associations. These events allowed researchers, students, companies and the public to meet and learn more about specific topics in cognitive science. Every events were different to highlight the specific ecosystem of each city but all events were punctuated by talks, stands of labs, associations and companies, and alumni roundtable.  
-* Creating an [alumni directory](https://federationfresco.fr/cogalumni/registre-cogalumni/) in cognitive science and a job ad page on the website
-* Promoting and organizing interaction and collaborative projects between the different associations in the federation. My favourite being this [collaborative escape game](https://www.cjoint.com/doc/21_04/KDlrJpM7yBJ_Je-ne-suis-pas-un-robot---Instructions.pdf?fbclid=IwAR39Ym5BTLvoU2644u0cXZRQNDlBSxTdNOrgi73Jh7gMZRRLJRc6Xz97tP8) that we created for the Brain Awareness Week (only available in French).
-
-```{r, layout = "l-body-ouset", fig.width=3, echo=FALSE}
-
-knitr::include_graphics("C:/Users/leamic/Documents/Website2.0/leacmichel.github.io/FSC1.jpg")
-
-knitr::include_graphics("C:/Users/leamic/Documents/Website2.0/leacmichel.github.io/FSC_Fresco2.jpg")
-
-```
-
-### Others
-* Donders Open Day
-* Brain exposition at the Brain Olympiad
-* Lifespan Cognitive Dynamics Lab [blog](https://www.rogierkievit.com/blog)
-
-```{r, layout = "l-body-ouset", fig.width=2, echo=FALSE}
-
-knitr::include_graphics("C:/Users/leamic/Documents/Website2.0/leacmichel.github.io/braingame.jpg")
-
-```

@@ -11,7 +11,7 @@ navbar:
       href: index.html
     - text: "Research"
       href: about.html
-    - text: "Outreach"
+    - text: "On the side"
       href: Outreach.html
     #- text: "Blog"
     #  href: blog.html

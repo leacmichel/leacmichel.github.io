@@ -14,39 +14,37 @@ knitr::include_graphics("C:/Users/leamic/Documents/Website2.0/leacmichel.github.
 
 ``` 
  
-**I am exploring how grey and white matter structure interact during development and how these interactions support cognitive development in children and adolescents.**
+**I am exploring how grey and white matter structure interact during development in adolescents.**
 
-In the past decades, studies on the development of the brain and studies on the development of cognitive abilities have been increasing tremendously, however how these two modalities develop in interplay is still an area with little knowledge. The goal of this PhD is to understand the relation between changes in grey and white matter structures and cognitive development. 
-During development, grey and white matter changes enable the children to adapt to its environment and to reach the maximum of their cognitive abilities, however it is still unclear how these processes interact with each other and what are the effects of genetics and environment. To move beyond the brain structure metrics, we will also examine what aspects of the underlying physiology (changes in neuropil or myelinization) is driving these processes.  
+In the past decades, studies on brain-behaviour associations have been increasing tremendously, however these studies often focus on either one metric in grey matter or in white matter. How these two modalities develop in interplay is still an area with little knowledge. The goal of this PhD is to understand the relation between changes in grey matter and changes in white matter structures during adolescence. 
+During development, grey and white matter changes enable the children to adapt to its environment and to reach the maximum of their cognitive abilities, however it is still unclear how these processes interact with each other and what are the effects of genetics and environment. To move beyond the brain structure metrics, we will also examine what aspects of the underlying physiology (changes in neuropil ) is driving these processes.  
 
-Throughout this PhD, I will focus on five core projects around this theme:  
+Throughout this PhD, I focused on four core projects around this theme:  
   
 ### 1. How grey and white matter structure bring partially overlapping information to the prediction of cognitive performance in children.   
 
 To compare the role of grey and white matter in supporting cognitive performance, we used regularized structural equation models to predict cognitive performance with grey and white matter measures. We found that a model including grey and white matter metrics explains better the variance in individual differences in cognitive performance compared to a model with only grey or white matter metrics and that it is not an addition of the variances explained by the two models individually. Thus, grey and white matter structure bring both unique as well as shared information in predicting individual differences in cognitive abilities in children. 
 
-Preprint: [Grey and white matter metrics demonstrate distinct and complementary prediction of differences in cognitive performance in children: Findings from ABCD (N= 11 876)](https://www.biorxiv.org/content/10.1101/2023.03.06.529634v1) 
+Published: [Grey and white matter metrics demonstrate distinct and complementary prediction of differences in cognitive performance in children: Findings from ABCD (N= 11 876)](https://www.jneurosci.org/content/jneuro/44/12/e0465232023.full.pdf) 
 
 
 ### 2. The longitudinal development of grey and white matter metrics in typical development: the influence of cognitive performance  
-We want to assess how longitudinal development of grey and white matter unfolds in typical development. Specifically, we want to understand whether recent changes in one measure/property (e.g. grey matter volume) predicts the rate of change in the other (e.g. fractional anisotropy), and how this informs our grasp of the dynamics of brain development. Moreover, we hypothesize that this process may manifest differently in people who differ in cognitive performance.  
-To address these questions, we will use a bivariate dual change score model to model changes and differences in brain structure.  
+We assessed how longitudinal development of grey and white matter unfolds in typical development. In our study, we investigated the co-development of grey matter volume and white matter fractional anisotropy across the 12-wave HUBU cohort including 90 typically developing individuals. Using generalized additive mixed models to characterize changes in these metrics between the age of 7 and 22 years, we explored the associations between individual differences at baseline and subsequent rates of change to elucidate the co-development between grey and white matter.
+
 You can see the preliminary results on the [slides](https://osf.io/b5ht7) from my ICPS 2023 symposium.
 
 
-### 3. Bridging the gap between structural MRI and biology using in vivo histology  
-The underlying physiology of common structural MRI metrics like cortical thickness is still debated. Using a unique dataset combining in vivo resection, MRI scans and behavioral measurements in 150 subjects, we will integrate measures of histology (thickness of the different layers, total dendritic length, cell body diameter…), structural neuroimaging (including cortical thickness and surface area) and IQ scores in a structural equation model to estimate how differences in low level biological features manifest as differences in MRI derived brain structure metrics. Crucially, we will also demonstrate how these histological metrics help explain individual differences in global cognitive performance metrics above and beyond the MRI measures. The aim of this project will be to highlight the possibilities and limitations of MRI metrics as a proxy of brain structure.  
+### 3. The neural scars of adversity: how do different kinds of adversity predict the development of grey and white matter structure in two longitudinal neuroimaging cohorts?
+We explored which brain modalities (grey or white matter) is more sensitive to early adversity (maltreatment). This study investigates whether distinct patterns of grey and white matter development during adolescence can be explained by exposure to different types of adversity. We applied the adverse adolescent experiences framework categorizing adversity into four levels: intrapersonal (e.g. accidents), interpersonal with parents (e.g. emotional neglect), interpersonal with peers (e.g. bullying) and community (e.g. neighborhood safety). Exposure to each of the four factors was estimated through a confirmatory factor analysis with variables from self-report questionnaires. We analyzed two large longitudinal datasets: the Adolescent Brain Cognitive Development study (~12,000 adolescents measured at ages 10, 12, and 14) and the IMAGEN study (~1,400 adolescents measured at ages 14, 19, and 22). Using latent growth curve models, we captured individual differences in brain development by estimating baseline levels (intercepts) and rates of change (slopes) for grey matter volume and white matter fractional anisotropy. We examined how different measures of adversity predicted individual differences in level and changes in grey and white matter. 
 
 
-### 4. The overlapping genetic influences on grey and white matter metrics  
-The aim of this project is to look at the overlapping and distinct genetic influences on grey and white development in childhood and adolescence. From past studies, we have reasons to think that grey and white matter share a large number of genes, however these studies had several issues: small sample, crude measures of brain structure and cross-sectional. We will use a longitudinal approach to detect the shared genetic effects of grey and white matter using different brain structure metrics in a large sample across childhood and adolescence.  
-
-
-### 5. Differentiating the impact of maltreatment in grey and white matter metric  
-We want to explore which brain modalities (grey or white matter) is more sensitive to early adversity (maltreatment). We will focus on deprivation related adversity which is thought to have an impact on neural development and more precisely synaptic pruning. 
+### 4. Bridging the gap between structural MRI and cognition using in vivo histology  
+The underlying physiology of common structural MRI metrics like cortical thickness is still debated. Using a unique dataset combining in vivo resection, MRI scans and behavioral measurements in 50 subjects, we integrated measures of histology (thickness of the different layers, total dendritic length, cell body diameter…), structural neuroimaging (cortical thickness) and IQ scores in a structural equation model to estimate how differences in low level biological features manifest as differences in MRI derived brain structure metrics. Crucially, we also demonstrate how these histological metrics help explain individual differences in global cognitive performance metrics above and beyond the MRI measures. The aim of this project is to highlight the possibilities and limitations of MRI metrics as a proxy of brain structure.  
 
 
 
-**If you want to know more, here is the video of the presentation I did for my department at the end of my second-year presenting my first three projects**
+
+
+**If you want to know more, here is the video of the presentation I did for my department at the end of my second-year presenting three projects**
 <iframe width="560" height="315" src="https://www.youtube.com/embed/loQhqkxR73o?si=QRvQv7FDtwXMBQ6g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
