@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ```{r, layout = "l-body-ouset", fig.width=3, echo=FALSE}
 
-knitr::include_graphics("C:/Users/leamic/Documents/Website2.0/leacmichel.github.io/talkposter.jpg")
+knitr::include_graphics("talkposter.jpg")
 
 ``` 
  
