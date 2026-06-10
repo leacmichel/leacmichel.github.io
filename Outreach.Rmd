@@ -9,20 +9,21 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ## Green Research
-I am part of the department Green Team within my institute since January 2023. Our main tasks are to create awareness about the environmental footprint of our research/academic life, with a particular focus on flight behaviour and suggest individual and collective actions to minimize it. We organize events, push for greener policies and raise awareness about relevant topics for academia. 
+I strongly believe that, as scientists, we have a big responsibility to act and inform on the climate crisis. Particularly, as academia is part of the problem and createS its own carbon footprint. 
 
-In October 2023, I have been elected Chair (Elect) of the [OHBM Sustainable and Environmental Action Specific Interest Group](https://ohbm-environment.org/), position that I will occupy for the next three years. The group works with the neuroimaging community to develop tools and educational materials that help researchers be aware of their environmental impact and make changes to minimise this. This includes working directly with OHBM to advise on how the annual conference can be made more sustainable.
+In 2023, we funded the Green Team within my institute to act on sustainability at the departmental level. Our main tasks are to calculate and create awareness about the environmental footprint of our research/academic life, and suggest individual and collective actions to minimize it. Among our main projects, we tracked the travel behaviour of the whole department for the last 3 years, calculated the carbon footprint of the department's wet lab and installed a carbon footprint calculator on the Donders' High Performance Cluster to monitor the computational footprint.We also organize events, push for greener policies and raise awareness about relevant topics for academia. 
+In 2026, I was awarded the [Donders Cube](https://www.linkedin.com/feed/update/urn:li:activity:7470105880110338048/) for this work.
+
+Since 2023, I have also been a member of the [OHBM Sustainable and Environmental Action Specific Interest Group](https://ohbm-environment.org/), for which I was elected Chair in 2024. The group works with the neuroimaging community to develop tools and educational materials that help researchers be aware of their environmental impact and make changes to minimise this. This includes working directly with OHBM to advise on how the annual conference can be made more sustainable.
 
 
 
 ## Outreach
-
 During my PhD, I got invested in several outreach activities with the aim to bring science outside of the lab. I participated in Open Days, events organised for students, visits in classroom, Brain Awareness Weeks to talk about brain structure in human and non human. 
-
 
 ### Pint of Science 
 The [Pint of Science Festival](https://pintofscience.com/) is an international yearly event aimed at bridging the gap between the scientists and the public. Researchers come talk about their research in lay-man terms in a bar/cafe/public area to meet a larger audience. 
-I have been part for four years of the [Nijmegen committee](https://www.pintofscience.nl/nijmegen). This year, I will present research on my PhD with a talk titled "Grey or white, does it matter?"
+I have been part for four years of the [Nijmegen committee](https://www.pintofscience.nl/nijmegen). This year, I will present research on my PhD with a talk titled ["Grey or white, does it matter?"](https://osf.io/ep2dg/files/xm54r).
 
 
 ### Fresco/Cognivence
@@ -42,7 +43,6 @@ knitr::include_graphics("C:/Users/leamic/Documents/Website2.0/leacmichel.github.
 
 
 ## The platform PhD et al.
-
 From my struggle understanding how to create collaboration as an early career researcher, I created [PhD et al.](https://phd-et-al.org/)  
 The aim of PhD et al. is to create a space to foster collaboration between PhD students around the world. The output will be a website with two main features:
 

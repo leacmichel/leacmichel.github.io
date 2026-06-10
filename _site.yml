@@ -9,7 +9,7 @@ navbar:
   right:
     - text: "Home"
       href: index.html
-    - text: "Research"
+    - text: "My PhD"
       href: about.html
     - text: "On the side"
       href: Outreach.html
