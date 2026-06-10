@@ -35,9 +35,7 @@ jobs:
           install.packages("rmarkdown")
           install.packages("distill")
           install.packages("postcards")
-          install.packages("devtools")
           install.packages("fs")
-          devtools::install_github("leacmichel/leacmichel.github.io")
         shell: Rscript {0}
         
       - name: Render Site
